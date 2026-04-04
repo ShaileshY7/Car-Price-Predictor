@@ -254,23 +254,19 @@
 
 <script>
     function load_car_models(company_id, car_model_id) {
-        var company = document.getElementById(company_id);
-        var car_model = document.getElementById(car_model_id);
-        car_model.value = "";
-        car_model.innerHTML = "";
-        {% for company in companies %}
-            if (company.value == "{{ company }}") {
-                {% for model in car_models %}
-                    {% if company in model %}
-                        var newOption = document.createElement("option");
-                        newOption.value = "{{ model }}";
-                        newOption.innerHTML = "{{ model }}";
-                        car_model.options.add(newOption);
-                    {% endif %}
-                {% endfor %}
-            }
-        {% endfor %}
+    var company = document.getElementById(company_id).value;
+    var car_model = document.getElementById(car_model_id);
+    car_model.innerHTML = "";
+    var models = {{ car_models | tojson }};
+    if (models[company]) {
+        models[company].forEach(function(model) {
+            var newOption = document.createElement("option");
+            newOption.value = model;
+            newOption.innerHTML = model;
+            car_model.options.add(newOption);
+        });
     }
+}
 
     function send_data() {
         var resultBox = document.getElementById('result-box');
