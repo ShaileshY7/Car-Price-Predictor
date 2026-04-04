@@ -33,6 +33,7 @@ An AI-powered web application that predicts the resale price of used cars in the
 
 ## 📂 Project Structure
 
+\`\`\`
 Car_Price_Predictor/
 ├── application.py          ← Flask backend
 ├── RandomForestModel.pkl   ← Trained ML model
@@ -44,6 +45,7 @@ Car_Price_Predictor/
 │       └── style.css       ← Custom dark theme styles
 └── templates/
     └── index.html          ← Frontend UI
+\`\`\`
 
 ---
 
@@ -71,32 +73,32 @@ Car_Price_Predictor/
 ## 🚀 Run Locally
 
 ### 1. Clone the repository
-
+\`\`\`bash
 git clone https://github.com/ShaileshY7/Car-Price-Predictor.git
 cd Car-Price-Predictor
-
+\`\`\`
 
 ### 2. Create virtual environment
-
+\`\`\`bash
 python -m venv .venv
 .venv\Scripts\activate      # Windows
 source .venv/bin/activate   # Mac/Linux
-
+\`\`\`
 
 ### 3. Install dependencies
-
+\`\`\`bash
 pip install -r requirements.txt
-
+\`\`\`
 
 ### 4. Run the app
-
+\`\`\`bash
 python application.py
-
+\`\`\`
 
 ### 5. Open in browser
-
+\`\`\`
 http://127.0.0.1:5000
-
+\`\`\`
 
 ---
 
@@ -113,13 +115,14 @@ http://127.0.0.1:5000
 
 ## 📦 Dependencies
 
+\`\`\`
 Flask==3.1.3
 flask-cors==6.0.2
 pandas==3.0.2
 scikit-learn==1.6.1
 numpy==2.4.4
 joblib==1.5.3
-
+\`\`\`
 
 ---
 
