@@ -2,7 +2,8 @@
 
 An AI-powered web application that predicts the resale price of used cars in the Indian market. Built with Flask and Machine Learning.
 
-🌐 **Live Demo:** [car-price-predictor-3foc.onrender.com](https://car-price-predictor-3foc.onrender.com)
+## 🔗 Live Demo
+👉 [Click here to try the app](https://huggingface.co/spaces/shai-yad/car-price-predictor)
 
 ---
 
@@ -26,26 +27,24 @@ An AI-powered web application that predicts the resale price of used cars in the
 | ML Model | Random Forest (scikit-learn) |
 | Data | Pandas, NumPy |
 | Dataset | CarDekho (15,392 records) |
-| Deployment | Render |
+| Deployment | Hugging Face Spaces |
 | Version Control | GitHub |
 
 ---
 
 ## 📂 Project Structure
-
-\`\`\`
 Car_Price_Predictor/
 ├── application.py          ← Flask backend
 ├── RandomForestModel.pkl   ← Trained ML model
 ├── Cleaned_car_new.csv     ← Cleaned dataset
 ├── requirements.txt        ← Python dependencies
+├── Dockerfile              ← Container configuration
 ├── .gitignore
 ├── static/
 │   └── css/
 │       └── style.css       ← Custom dark theme styles
 └── templates/
-    └── index.html          ← Frontend UI
-\`\`\`
+└── index.html          ← Frontend UI
 
 ---
 
@@ -73,32 +72,30 @@ Car_Price_Predictor/
 ## 🚀 Run Locally
 
 ### 1. Clone the repository
-\`\`\`bash
+```bash
 git clone https://github.com/ShaileshY7/Car-Price-Predictor.git
 cd Car-Price-Predictor
-\`\`\`
+```
 
 ### 2. Create virtual environment
-\`\`\`bash
+```bash
 python -m venv .venv
 .venv\Scripts\activate      # Windows
 source .venv/bin/activate   # Mac/Linux
-\`\`\`
+```
 
 ### 3. Install dependencies
-\`\`\`bash
+```bash
 pip install -r requirements.txt
-\`\`\`
+```
 
 ### 4. Run the app
-\`\`\`bash
+```bash
 python application.py
-\`\`\`
+```
 
 ### 5. Open in browser
-\`\`\`
-http://127.0.0.1:5000
-\`\`\`
+http://127.0.0.1:7860
 
 ---
 
@@ -109,28 +106,26 @@ http://127.0.0.1:5000
 | Maruti | Alto | 2017 | Petrol | 80,000 | ₹2.38 Lakh |
 | Honda | City | 2020 | Diesel | 60,000 | ₹5.85 Lakh |
 | Toyota | Fortuner | 2021 | Diesel | 20,000 | ₹28.65 Lakh |
-| Audi | A4 | 2026 | Petrol | 60,000 | ₹30.82 Lakh |
+| Audi | A4 | 2022 | Petrol | 60,000 | ₹30.82 Lakh |
 
 ---
 
 ## 📦 Dependencies
-
-\`\`\`
 Flask==3.1.3
 flask-cors==6.0.2
-pandas==3.0.2
-scikit-learn==1.6.1
-numpy==2.4.4
+pandas==2.2.2
+scikit-learn==1.5.2
+numpy==1.26.4
 joblib==1.5.3
-\`\`\`
+gunicorn
 
 ---
 
 ## 🌐 Deployment
 
-This app is deployed on **Render** (free tier).
+This app is deployed on **Hugging Face Spaces** (free tier) using Docker.
 
-> ⚠️ Note: Free instances spin down after inactivity. First load may take 50+ seconds to wake up.
+> ✅ Always on — no cold starts or sleep delays!
 
 ---
 
@@ -138,6 +133,7 @@ This app is deployed on **Render** (free tier).
 
 **Shailesh Yadav**
 - GitHub: [@ShaileshY7](https://github.com/ShaileshY7)
+- Hugging Face: [@shai-yad](https://huggingface.co/shai-yad)
 
 ---
 
